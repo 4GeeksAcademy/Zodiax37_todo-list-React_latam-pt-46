@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+const TodoLista = () => {
 
 	const [tasks, setTasks] = useState([])
 
@@ -49,4 +49,4 @@ const deleteTasks = (i) => {
 	);
 };
 
-export default Home;
+export default TodoLista;
