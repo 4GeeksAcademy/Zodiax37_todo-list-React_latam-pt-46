@@ -37,9 +37,14 @@ const deleteTasks = (i) => {
 
 			<div className="mt-4">
 				{tasks.map((task, index) => (
-					<div key={index} className="d-flex justify-content-between align-items-center mb-2 border p-2 rounded">
+					<div
+						key={index}
+						className="todo-item d-flex justify-content-between align-items-center mb-2 border p-2 rounded"
+					>
 						<span>{task}</span>
-						<button className="btn btn-sm btn-danger" onClick={() => deleteTasks(index)}>X</button>
+						<button className="delete-btn btn btn-sm btn-danger" onClick={() => deleteTasks(index)}>
+							X
+						</button>
 					</div>
 				))}
 				<small className="text-muted"> {tasks.length === 0 ? "No tienes tareas pendientes" : `${tasks.length} tarea${tasks.length > 1 ? "s" : ""} pendiente${tasks.length > 1 ? "s" : ""}`}
